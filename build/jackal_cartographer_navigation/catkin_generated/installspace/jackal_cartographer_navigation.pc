@@ -1,0 +1,8 @@
+prefix=/home/koko/Desktop/Independent_ws/install
+
+Name: jackal_cartographer_navigation
+Description: Description of jackal_cartographer_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/koko/Desktop/Independent_ws/install/lib 
+Requires: 

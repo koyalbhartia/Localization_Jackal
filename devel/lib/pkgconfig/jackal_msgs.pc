@@ -1,0 +1,8 @@
+prefix=/home/koko/Desktop/Independent_ws/devel
+
+Name: jackal_msgs
+Description: Description of jackal_msgs
+Version: 0.6.3
+Cflags: -I/home/koko/Desktop/Independent_ws/devel/include
+Libs: -L/home/koko/Desktop/Independent_ws/devel/lib 
+Requires: std_msgs message_runtime

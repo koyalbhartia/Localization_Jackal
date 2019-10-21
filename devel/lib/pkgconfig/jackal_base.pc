@@ -1,0 +1,8 @@
+prefix=/home/koko/Desktop/Independent_ws/devel
+
+Name: jackal_base
+Description: Description of jackal_base
+Version: 0.5.0
+Cflags: 
+Libs: -L/home/koko/Desktop/Independent_ws/devel/lib 
+Requires: 
