@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/jackal_msgs_generate_messages_py"
-  "/home/koko/Desktop/Independent_ws/devel/lib/python2.7/dist-packages/jackal_msgs/msg/_Drive.py"
-  "/home/koko/Desktop/Independent_ws/devel/lib/python2.7/dist-packages/jackal_msgs/msg/_Status.py"
-  "/home/koko/Desktop/Independent_ws/devel/lib/python2.7/dist-packages/jackal_msgs/msg/_Feedback.py"
-  "/home/koko/Desktop/Independent_ws/devel/lib/python2.7/dist-packages/jackal_msgs/msg/_DriveFeedback.py"
-  "/home/koko/Desktop/Independent_ws/devel/lib/python2.7/dist-packages/jackal_msgs/msg/__init__.py"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/python2.7/dist-packages/jackal_msgs/msg/_Drive.py"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/python2.7/dist-packages/jackal_msgs/msg/_DriveFeedback.py"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/python2.7/dist-packages/jackal_msgs/msg/_Feedback.py"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/python2.7/dist-packages/jackal_msgs/msg/_Status.py"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/python2.7/dist-packages/jackal_msgs/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

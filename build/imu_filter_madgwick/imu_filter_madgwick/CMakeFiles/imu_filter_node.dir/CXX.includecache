@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/koko/Desktop/Independent_ws/devel/include/imu_filter_madgwick/ImuFilterMadgwickConfig.h
+/home/koko/Desktop/Localization_Jackal/devel/include/imu_filter_madgwick/ImuFilterMadgwickConfig.h
 dynamic_reconfigure/config_tools.h
 -
 limits
@@ -24,7 +24,7 @@ dynamic_reconfigure/config_init_mutex.h
 boost/any.hpp
 -
 
-/home/koko/Desktop/Independent_ws/src/imu_filter_madgwick/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter.h
+/home/koko/Desktop/Localization_Jackal/src/imu_filter_madgwick/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter.h
 math.h
 -
 ros/ros.h
@@ -46,11 +46,11 @@ message_filters/sync_policies/approximate_time.h
 dynamic_reconfigure/server.h
 -
 imu_filter_madgwick/ImuFilterMadgwickConfig.h
-/home/koko/Desktop/Independent_ws/src/imu_filter_madgwick/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter_madgwick/ImuFilterMadgwickConfig.h
+/home/koko/Desktop/Localization_Jackal/src/imu_filter_madgwick/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter_madgwick/ImuFilterMadgwickConfig.h
 
-/home/koko/Desktop/Independent_ws/src/imu_filter_madgwick/imu_filter_madgwick/src/imu_filter_node.cpp
+/home/koko/Desktop/Localization_Jackal/src/imu_filter_madgwick/imu_filter_madgwick/src/imu_filter_node.cpp
 imu_filter_madgwick/imu_filter.h
-/home/koko/Desktop/Independent_ws/src/imu_filter_madgwick/imu_filter_madgwick/src/imu_filter_madgwick/imu_filter.h
+/home/koko/Desktop/Localization_Jackal/src/imu_filter_madgwick/imu_filter_madgwick/src/imu_filter_madgwick/imu_filter.h
 
 /opt/ros/kinetic/include/dynamic_reconfigure/BoolParameter.h
 string

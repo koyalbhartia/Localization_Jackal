@@ -1,8 +1,8 @@
-# Install script for directory: /home/koko/Desktop/Independent_ws/src/jackal/jackal_control
+# Install script for directory: /home/koko/Desktop/Localization_Jackal/src/jackal/jackal_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Independent_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Localization_Jackal/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,24 +33,24 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/build/jackal/jackal_control/catkin_generated/installspace/jackal_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_control/catkin_generated/installspace/jackal_control.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_control/cmake" TYPE FILE FILES
-    "/home/koko/Desktop/Independent_ws/build/jackal/jackal_control/catkin_generated/installspace/jackal_controlConfig.cmake"
-    "/home/koko/Desktop/Independent_ws/build/jackal/jackal_control/catkin_generated/installspace/jackal_controlConfig-version.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_control/catkin_generated/installspace/jackal_controlConfig.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_control/catkin_generated/installspace/jackal_controlConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_control" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/src/jackal/jackal_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_control" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/src/jackal/jackal_control/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_control" TYPE DIRECTORY FILES
-    "/home/koko/Desktop/Independent_ws/src/jackal/jackal_control/config"
-    "/home/koko/Desktop/Independent_ws/src/jackal/jackal_control/launch"
+    "/home/koko/Desktop/Localization_Jackal/src/jackal/jackal_control/config"
+    "/home/koko/Desktop/Localization_Jackal/src/jackal/jackal_control/launch"
     )
 endif()
 

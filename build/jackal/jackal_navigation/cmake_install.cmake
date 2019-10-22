@@ -1,8 +1,8 @@
-# Install script for directory: /home/koko/Desktop/Independent_ws/src/jackal/jackal_navigation
+# Install script for directory: /home/koko/Desktop/Localization_Jackal/src/jackal/jackal_navigation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Independent_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Localization_Jackal/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,25 +33,25 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/build/jackal/jackal_navigation/catkin_generated/installspace/jackal_navigation.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_navigation/catkin_generated/installspace/jackal_navigation.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_navigation/cmake" TYPE FILE FILES
-    "/home/koko/Desktop/Independent_ws/build/jackal/jackal_navigation/catkin_generated/installspace/jackal_navigationConfig.cmake"
-    "/home/koko/Desktop/Independent_ws/build/jackal/jackal_navigation/catkin_generated/installspace/jackal_navigationConfig-version.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_navigation/catkin_generated/installspace/jackal_navigationConfig.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_navigation/catkin_generated/installspace/jackal_navigationConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_navigation" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/src/jackal/jackal_navigation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_navigation" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/src/jackal/jackal_navigation/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_navigation" TYPE DIRECTORY FILES
-    "/home/koko/Desktop/Independent_ws/src/jackal/jackal_navigation/launch"
-    "/home/koko/Desktop/Independent_ws/src/jackal/jackal_navigation/maps"
-    "/home/koko/Desktop/Independent_ws/src/jackal/jackal_navigation/params"
+    "/home/koko/Desktop/Localization_Jackal/src/jackal/jackal_navigation/launch"
+    "/home/koko/Desktop/Localization_Jackal/src/jackal/jackal_navigation/maps"
+    "/home/koko/Desktop/Localization_Jackal/src/jackal/jackal_navigation/params"
     )
 endif()
 

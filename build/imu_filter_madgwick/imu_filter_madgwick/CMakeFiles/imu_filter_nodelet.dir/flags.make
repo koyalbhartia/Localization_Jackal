@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"imu_filter_madgwick\" -Dimu_filter_nodelet_EXPORTS
 
-CXX_INCLUDES = -I/home/koko/Desktop/Independent_ws/devel/include -I/home/koko/Desktop/Independent_ws/src/imu_filter_madgwick/imu_filter_madgwick/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/koko/Desktop/Localization_Jackal/devel/include -I/home/koko/Desktop/Localization_Jackal/src/imu_filter_madgwick/imu_filter_madgwick/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

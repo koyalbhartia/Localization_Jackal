@@ -1,8 +1,8 @@
-# Install script for directory: /home/koko/Desktop/Independent_ws/src/jackal_manipulator/jackal_manipulator_description
+# Install script for directory: /home/koko/Desktop/Localization_Jackal/src/jackal_manipulator/jackal_manipulator_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Independent_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Localization_Jackal/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,21 +33,21 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/build/jackal_manipulator/jackal_manipulator_description/catkin_generated/installspace/jackal_manipulator_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/build/jackal_manipulator/jackal_manipulator_description/catkin_generated/installspace/jackal_manipulator_description.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_manipulator_description/cmake" TYPE FILE FILES
-    "/home/koko/Desktop/Independent_ws/build/jackal_manipulator/jackal_manipulator_description/catkin_generated/installspace/jackal_manipulator_descriptionConfig.cmake"
-    "/home/koko/Desktop/Independent_ws/build/jackal_manipulator/jackal_manipulator_description/catkin_generated/installspace/jackal_manipulator_descriptionConfig-version.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal_manipulator/jackal_manipulator_description/catkin_generated/installspace/jackal_manipulator_descriptionConfig.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal_manipulator/jackal_manipulator_description/catkin_generated/installspace/jackal_manipulator_descriptionConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_manipulator_description" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/src/jackal_manipulator/jackal_manipulator_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_manipulator_description" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/src/jackal_manipulator/jackal_manipulator_description/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_manipulator_description" TYPE DIRECTORY FILES "/home/koko/Desktop/Independent_ws/src/jackal_manipulator/jackal_manipulator_description/urdf")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_manipulator_description" TYPE DIRECTORY FILES "/home/koko/Desktop/Localization_Jackal/src/jackal_manipulator/jackal_manipulator_description/urdf")
 endif()
 

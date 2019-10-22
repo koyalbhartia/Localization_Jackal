@@ -1,8 +1,8 @@
-prefix=/home/koko/Desktop/Independent_ws/devel
+prefix=/home/koko/Desktop/Localization_Jackal/devel
 
 Name: imu_filter_madgwick
 Description: Description of imu_filter_madgwick
 Version: 0.1.1
-Cflags: -I/home/koko/Desktop/Independent_ws/devel/include
-Libs: -L/home/koko/Desktop/Independent_ws/devel/lib -limu_filter -limu_filter_nodelet
+Cflags: -I/home/koko/Desktop/Localization_Jackal/devel/include
+Libs: -L/home/koko/Desktop/Localization_Jackal/devel/lib -limu_filter -limu_filter_nodelet
 Requires: roscpp sensor_msgs geometry_msgs tf nodelet message_filters dynamic_reconfigure

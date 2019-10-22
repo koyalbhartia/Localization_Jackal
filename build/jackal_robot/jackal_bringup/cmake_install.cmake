@@ -1,8 +1,8 @@
-# Install script for directory: /home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_bringup
+# Install script for directory: /home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Independent_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Localization_Jackal/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,32 +33,32 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/build/jackal_robot/jackal_bringup/catkin_generated/installspace/jackal_bringup.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/build/jackal_robot/jackal_bringup/catkin_generated/installspace/jackal_bringup.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_bringup/cmake" TYPE FILE FILES
-    "/home/koko/Desktop/Independent_ws/build/jackal_robot/jackal_bringup/catkin_generated/installspace/jackal_bringupConfig.cmake"
-    "/home/koko/Desktop/Independent_ws/build/jackal_robot/jackal_bringup/catkin_generated/installspace/jackal_bringupConfig-version.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal_robot/jackal_bringup/catkin_generated/installspace/jackal_bringupConfig.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal_robot/jackal_bringup/catkin_generated/installspace/jackal_bringupConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_bringup" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_bringup/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_bringup" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_bringup/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  include("/home/koko/Desktop/Independent_ws/build/jackal_robot/jackal_bringup/catkin_generated/safe_execute_install.cmake")
+  include("/home/koko/Desktop/Localization_Jackal/build/jackal_robot/jackal_bringup/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_bringup" TYPE DIRECTORY FILES "/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_bringup/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_bringup" TYPE DIRECTORY FILES "/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_bringup/launch")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/jackal_bringup" TYPE PROGRAM FILES
-    "/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_bringup/scripts/install"
-    "/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_bringup/scripts/navsat_rtk_relay"
+    "/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_bringup/scripts/install"
+    "/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_bringup/scripts/navsat_rtk_relay"
     )
 endif()
 

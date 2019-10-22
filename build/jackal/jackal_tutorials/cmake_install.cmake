@@ -1,8 +1,8 @@
-# Install script for directory: /home/koko/Desktop/Independent_ws/src/jackal/jackal_tutorials
+# Install script for directory: /home/koko/Desktop/Localization_Jackal/src/jackal/jackal_tutorials
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Independent_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/koko/Desktop/Localization_Jackal/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/build/jackal/jackal_tutorials/catkin_generated/installspace/jackal_tutorials.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_tutorials/catkin_generated/installspace/jackal_tutorials.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_tutorials/cmake" TYPE FILE FILES
-    "/home/koko/Desktop/Independent_ws/build/jackal/jackal_tutorials/catkin_generated/installspace/jackal_tutorialsConfig.cmake"
-    "/home/koko/Desktop/Independent_ws/build/jackal/jackal_tutorials/catkin_generated/installspace/jackal_tutorialsConfig-version.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_tutorials/catkin_generated/installspace/jackal_tutorialsConfig.cmake"
+    "/home/koko/Desktop/Localization_Jackal/build/jackal/jackal_tutorials/catkin_generated/installspace/jackal_tutorialsConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_tutorials" TYPE FILE FILES "/home/koko/Desktop/Independent_ws/src/jackal/jackal_tutorials/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/jackal_tutorials" TYPE FILE FILES "/home/koko/Desktop/Localization_Jackal/src/jackal/jackal_tutorials/package.xml")
 endif()
 

@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"jackal_base\"
 
-CXX_INCLUDES = -I/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include -I/home/koko/Desktop/Independent_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include -I/home/koko/Desktop/Localization_Jackal/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

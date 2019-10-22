@@ -1,8 +1,8 @@
-prefix=/home/koko/Desktop/Independent_ws/install
+prefix=/home/koko/Desktop/Localization_Jackal/install
 
 Name: jackal_manipulator_gazebo
 Description: Description of jackal_manipulator_gazebo
 Version: 0.3.0
 Cflags: 
-Libs: -L/home/koko/Desktop/Independent_ws/install/lib 
+Libs: -L/home/koko/Desktop/Localization_Jackal/install/lib 
 Requires: 

@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/jackal_node.dir/src/jackal_base.cpp.o"
   "CMakeFiles/jackal_node.dir/src/jackal_hardware.cpp.o"
   "CMakeFiles/jackal_node.dir/src/jackal_diagnostic_updater.cpp.o"
-  "/home/koko/Desktop/Independent_ws/devel/lib/jackal_base/jackal_node.pdb"
-  "/home/koko/Desktop/Independent_ws/devel/lib/jackal_base/jackal_node"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/jackal_base/jackal_node.pdb"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/jackal_base/jackal_node"
 )
 
 # Per-language clean rules from dependency scanning.

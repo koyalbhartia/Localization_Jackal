@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/imu_filter_nodelet.dir/src/imu_filter_nodelet.cpp.o"
-  "/home/koko/Desktop/Independent_ws/devel/lib/libimu_filter_nodelet.pdb"
-  "/home/koko/Desktop/Independent_ws/devel/lib/libimu_filter_nodelet.so"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/libimu_filter_nodelet.pdb"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/libimu_filter_nodelet.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "jackal_cartographer_navigation"
-PROJECT_SPACE_DIR = "/home/koko/Desktop/Independent_ws/install"
+PROJECT_SPACE_DIR = "/home/koko/Desktop/Localization_Jackal/install"
 PROJECT_VERSION = "0.0.0"

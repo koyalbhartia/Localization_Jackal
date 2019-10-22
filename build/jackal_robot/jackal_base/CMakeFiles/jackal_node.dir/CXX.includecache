@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/koko/Desktop/Independent_ws/devel/include/jackal_msgs/Drive.h
+/home/koko/Desktop/Localization_Jackal/devel/include/jackal_msgs/Drive.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/koko/Desktop/Independent_ws/devel/include/jackal_msgs/DriveFeedback.h
+/home/koko/Desktop/Localization_Jackal/devel/include/jackal_msgs/DriveFeedback.h
 string
 -
 vector
@@ -38,7 +38,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/koko/Desktop/Independent_ws/devel/include/jackal_msgs/Feedback.h
+/home/koko/Desktop/Localization_Jackal/devel/include/jackal_msgs/Feedback.h
 string
 -
 vector
@@ -58,7 +58,7 @@ std_msgs/Header.h
 jackal_msgs/DriveFeedback.h
 -
 
-/home/koko/Desktop/Independent_ws/devel/include/jackal_msgs/Status.h
+/home/koko/Desktop/Localization_Jackal/devel/include/jackal_msgs/Status.h
 string
 -
 vector
@@ -76,45 +76,45 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/jackal_diagnostic_updater.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/jackal_diagnostic_updater.h
 string
 -
 diagnostic_updater/diagnostic_updater.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/diagnostic_updater/diagnostic_updater.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/diagnostic_updater/diagnostic_updater.h
 diagnostic_updater/publisher.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/diagnostic_updater/publisher.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/diagnostic_updater/publisher.h
 jackal_msgs/Status.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/jackal_msgs/Status.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/jackal_msgs/Status.h
 nmea_msgs/Sentence.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/nmea_msgs/Sentence.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/nmea_msgs/Sentence.h
 ros/ros.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/ros/ros.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/ros/ros.h
 sensor_msgs/Imu.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/sensor_msgs/Imu.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/sensor_msgs/Imu.h
 std_msgs/Bool.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/std_msgs/Bool.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/std_msgs/Bool.h
 
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/jackal_hardware.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/jackal_hardware.h
 boost/thread.hpp
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/boost/thread.hpp
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/boost/thread.hpp
 hardware_interface/joint_state_interface.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/hardware_interface/joint_state_interface.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/hardware_interface/joint_state_interface.h
 hardware_interface/joint_command_interface.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/hardware_interface/joint_command_interface.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/hardware_interface/joint_command_interface.h
 hardware_interface/robot_hw.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/hardware_interface/robot_hw.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/hardware_interface/robot_hw.h
 jackal_msgs/Drive.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/jackal_msgs/Drive.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/jackal_msgs/Drive.h
 jackal_msgs/Feedback.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/jackal_msgs/Feedback.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/jackal_msgs/Feedback.h
 realtime_tools/realtime_publisher.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/realtime_tools/realtime_publisher.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/realtime_tools/realtime_publisher.h
 ros/ros.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/ros/ros.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/ros/ros.h
 sensor_msgs/JointState.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/include/jackal_base/sensor_msgs/JointState.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/include/jackal_base/sensor_msgs/JointState.h
 
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/jackal_base.cpp
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/jackal_base.cpp
 string
 -
 boost/asio/io_service.hpp
@@ -124,17 +124,17 @@ boost/thread.hpp
 boost/chrono.hpp
 -
 controller_manager/controller_manager.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/controller_manager/controller_manager.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/controller_manager/controller_manager.h
 jackal_base/jackal_diagnostic_updater.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/jackal_base/jackal_diagnostic_updater.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/jackal_base/jackal_diagnostic_updater.h
 jackal_base/jackal_hardware.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/jackal_base/jackal_hardware.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/jackal_base/jackal_hardware.h
 ros/ros.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/ros/ros.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/ros/ros.h
 rosserial_server/serial_session.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/rosserial_server/serial_session.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/rosserial_server/serial_session.h
 
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/jackal_diagnostic_updater.cpp
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/jackal_diagnostic_updater.cpp
 string
 -
 sys/types.h
@@ -142,17 +142,17 @@ sys/types.h
 ifaddrs.h
 -
 boost/algorithm/string/predicate.hpp
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/boost/algorithm/string/predicate.hpp
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/boost/algorithm/string/predicate.hpp
 diagnostic_updater/update_functions.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/diagnostic_updater/update_functions.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/diagnostic_updater/update_functions.h
 jackal_base/jackal_diagnostic_updater.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/jackal_base/jackal_diagnostic_updater.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/jackal_base/jackal_diagnostic_updater.h
 
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/jackal_hardware.cpp
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/jackal_hardware.cpp
 boost/assign.hpp
 -
 jackal_base/jackal_hardware.h
-/home/koko/Desktop/Independent_ws/src/jackal_robot/jackal_base/src/jackal_base/jackal_hardware.h
+/home/koko/Desktop/Localization_Jackal/src/jackal_robot/jackal_base/src/jackal_base/jackal_hardware.h
 
 /opt/ros/kinetic/include/boost_161_condition_variable.h
 boost/thread/detail/platform.hpp

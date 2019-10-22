@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/jackal_base_simple_joy_node.dir/src/simple_joy_node.cpp.o"
-  "/home/koko/Desktop/Independent_ws/devel/lib/jackal_base/simple_joy_node.pdb"
-  "/home/koko/Desktop/Independent_ws/devel/lib/jackal_base/simple_joy_node"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/jackal_base/simple_joy_node.pdb"
+  "/home/koko/Desktop/Localization_Jackal/devel/lib/jackal_base/simple_joy_node"
 )
 
 # Per-language clean rules from dependency scanning.
