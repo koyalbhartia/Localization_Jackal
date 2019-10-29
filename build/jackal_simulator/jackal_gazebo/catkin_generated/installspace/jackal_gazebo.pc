@@ -1,8 +1,0 @@
-prefix=/home/koko/Desktop/Localization_Jackal/install
-
-Name: jackal_gazebo
-Description: Description of jackal_gazebo
-Version: 0.3.0
-Cflags: 
-Libs: -L/home/koko/Desktop/Localization_Jackal/install/lib 
-Requires: 
