@@ -1,0 +1,5 @@
+<launch>
+ <include file="$(find ar_tag_detection)/launch/Track.launch" />
+ <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
+ <node name="modelvisualisation" pkg="rviz" type="rviz" output="screen" args="$(find ar_tag_detection)/rviz/marker.rviz" />
+</launch>
