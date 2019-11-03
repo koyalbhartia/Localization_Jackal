@@ -35,5 +35,15 @@
 
   <!-- Spawn Jackal -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
-	      args="-urdf -model jackal -param robot_description -x 0 -y 0 -z 1.0" />
+	      args="-urdf -model jackal -param robot_description -x 2.0 -y 2.0 -z 0.0" />
+  
+  <!-- map load-->
+  <include file="$(find jackal_navigation)/launch/amcl_demo.launch">
+    <arg name="map_file" value="$(find jackal_gazebo)/rviz/mymap.yaml" />
+  </include>
+
+    <!-- Rviz-->
+  <include file="$(find jackal_viz)/launch/view_robot.launch">
+    <arg name="config" value="localization" />
+  </include>
 </launch>
