@@ -13,7 +13,7 @@
 
   <!-- Configuration of Jackal which you would like to simulate.
        See jackal_description for details. -->
-  <arg name="config" default="$(arg default_config)" />
+  <arg name="config" default="front_laser" />
 
   <!-- Launch Gazebo with the specified world -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -46,4 +46,12 @@
   <include file="$(find jackal_viz)/launch/view_robot.launch">
     <arg name="config" value="localization" />
   </include>
+<node name="warehouse_localization_node"    pkg="warehouse_localization"   type="warehouse_localization_node"  output="screen"/>
 </launch>
+<!-- RUN ROBOT STATE PUBLISHER
+   <param name="jackal_description" textfile="$(find jackal_description)/urdf/jackal.urdf.xacro"/>
+  <node name="jackal_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+    <remap from="robot_description" to="jackal_description" />
+  </node> -->
+
+
