@@ -5,7 +5,7 @@
         args="jackal_joint_publisher jackal_velocity_controller" />
   
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization"> 
-    <rosparam command="load" file="$(find jackal_control)/config/robot_localization_1.yaml" />
+    <rosparam command="load" file="$(find jackal_control)/config/robot_localization.yaml" />
   </node>
 
   <node pkg="twist_mux" type="twist_mux" name="twist_mux">

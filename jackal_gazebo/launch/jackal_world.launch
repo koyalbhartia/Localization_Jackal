@@ -47,7 +47,7 @@
     <arg name="config" value="localization" />
   </include>
 
-<include file="$(find ar_tag_detection/launch/main.launch"/>
+<include file="$(find ar_tag_detection)/launch/main.launch"/>
 
 </launch>
 

@@ -20,7 +20,7 @@ class Tags():
         rospy.init_node("AR_localization")
 
         #Publish on /AR_target_pose ,topic as a PoseStamped message
-        self.tag_pub = rospy.Publisher("AR_target_pose", Odometry, queue_size=10)
+        self.tag_pub = rospy.Publisher("initialpose", PoseWithCovarianceStamped, queue_size=10)
 
         #Subscribe pose from amcl_pose
         rospy.Subscriber("amcl", PoseWithCovarianceStamped, self.get_turtlePose)
@@ -39,9 +39,27 @@ class Tags():
             except yaml.YAMLError as exc:
                 print(exc)
                 print("check Global_planner.yaml in config folder")
-            return tag_locations
-    
-    def get_turtlePose(self, msg):
+            return tag_locationsodom1: /AR_target_pose
+odom1_config: [true, true, false,
+              false, false, true,
+              false, false, false,
+              false, false, false,
+              false, false, false]
+odom1_differential: false
+    odom1: /AR_target_pose
+odom1_config: [true, true, false,
+              false, false, true,
+              false, false, false,
+              false, false, false,
+              false, false, false]
+odom1_differential: false
+    def get_turtlePose(self, msg):odom1: /AR_target_pose
+odom1_config: [true, true, false,
+              false, false, true,
+              false, false, false,
+              false, false, false,
+              false, false, false]
+odom1_differential: false
         # get the pose of turtlebot
         self.X = msg.pose.pose.position.x
         self.Y = msg.pose.pose.position.y
@@ -69,7 +87,7 @@ class Tags():
 
             map_to_camera=np.dot(map_to_tag,tag_to_camera)
 
-            msg_pose=Odometry()
+            msg_pose=PoseWithCovarianceStamped()
             msg_pose.pose.pose.position.x=map_to_camera[0,3]
             msg_pose.pose.pose.position.y=map_to_camera[1,3]
             msg_pose.pose.pose.orientation.z=0.2
