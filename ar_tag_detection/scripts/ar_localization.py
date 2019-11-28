@@ -39,27 +39,9 @@ class Tags():
             except yaml.YAMLError as exc:
                 print(exc)
                 print("check Global_planner.yaml in config folder")
-            return tag_locationsodom1: /AR_target_pose
-odom1_config: [true, true, false,
-              false, false, true,
-              false, false, false,
-              false, false, false,
-              false, false, false]
-odom1_differential: false
-    odom1: /AR_target_pose
-odom1_config: [true, true, false,
-              false, false, true,
-              false, false, false,
-              false, false, false,
-              false, false, false]
-odom1_differential: false
-    def get_turtlePose(self, msg):odom1: /AR_target_pose
-odom1_config: [true, true, false,
-              false, false, true,
-              false, false, false,
-              false, false, false,
-              false, false, false]
-odom1_differential: false
+            return tag_locations
+    
+    def get_turtlePose(self, msg):
         # get the pose of turtlebot
         self.X = msg.pose.pose.position.x
         self.Y = msg.pose.pose.position.y
@@ -74,23 +56,43 @@ odom1_differential: false
             AR_x = msg.pose.pose.position.x
             AR_y = msg.pose.pose.position.y
             AR_Z = msg.pose.pose.position.z
+            Xrot = msg.pose.pose.orientation.y
+            Yrot = msg.pose.pose.orientation.x
             Zrot = msg.pose.pose.orientation.z
             Wrot = msg.pose.pose.orientation.w
-            AR_tz = math.atan2(2*Zrot*Wrot, 1-2*Zrot*Zrot)
+            # AR_x = 0
+            # AR_y = 0
+            # AR_Z = 0
+            # Xrot = 0
+            # Yrot = 0
+            # Zrot = 0
+            # Wrot = 0
+            # AR_tz = math.atan2(2*Zrot*Wrot, 1-2*Zrot*Zrot)
+            siny_cosp = 2 * (Wrot * Zrot + Xrot * Yrot)
+            cosy_cosp = 1 - 2 * (Yrot * Yrot + Zrot * Zrot)
+            AR_tz = math.atan2(siny_cosp, cosy_cosp)
+
+
+
             tag_location=self.import_yaml()
 
             Tag_pose=tag_location['AR_tags'][str(id_tag)]
 
             camera_to_tag=np.array([[math.cos(AR_tz),-math.sin(AR_tz),0,AR_x],[math.sin(AR_tz),math.cos(AR_tz),0,AR_y],[0,0,1,AR_Z],[0,0,0,1]])
             tag_to_camera=np.linalg.inv(camera_to_tag)
+            # tag_to_camera=(camera_to_tag)
             map_to_tag=np.array([[math.cos(Tag_pose[5]),-math.sin(Tag_pose[5]),0,Tag_pose[0]],[math.sin(Tag_pose[5]),math.cos(Tag_pose[5]),0,Tag_pose[1]],[0,0,1,Tag_pose[2]],[0,0,0,1]])
 
             map_to_camera=np.dot(map_to_tag,tag_to_camera)
 
             msg_pose=PoseWithCovarianceStamped()
-            msg_pose.pose.pose.position.x=map_to_camera[0,3]
-            msg_pose.pose.pose.position.y=map_to_camera[1,3]
-            msg_pose.pose.pose.orientation.z=0.2
+            msg_pose.pose.pose.position.x=map_to_camera[1,3]
+            msg_pose.pose.pose.position.y=map_to_camera[0,3]
+            if(abs(Tag_pose[5])==1.57):
+                msg_pose.pose.pose.orientation.z=-Tag_pose[5]
+            else:
+                msg_pose.pose.pose.orientation.z=Tag_pose[5]
+            
             # msg_pose.pose.pose.orientation.z=math.atan(map_to_camera[1,0]/map_to_camera[0,0])
             msg_pose.pose.pose.orientation.w=1
             self.tag_pub.publish(msg_pose)
