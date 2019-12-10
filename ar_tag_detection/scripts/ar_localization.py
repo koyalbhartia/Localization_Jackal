@@ -16,11 +16,14 @@ class Tags():
         self.X=None
         self.Y=None
         self.TZ=None
-        
+        self.iter=0
+        self._xtot=0
+        self._ytot=0
+        self._tagposetot=0
         rospy.init_node("AR_localization")
 
         #Publish on /AR_target_pose ,topic as a PoseStamped message
-        self.tag_pub = rospy.Publisher("initialpose", PoseWithCovarianceStamped, queue_size=10)
+        self.tag_pub = rospy.Publisher("initialpose", PoseWithCovarianceStamped, queue_size=1 )
 
         #Subscribe pose from amcl_pose
         rospy.Subscriber("amcl", PoseWithCovarianceStamped, self.get_turtlePose)
@@ -51,55 +54,88 @@ class Tags():
  
     def get_tags(self, data):
         try:
-            msg=data.markers[0]
-            id_tag=msg.id
-            AR_x = msg.pose.pose.position.x
-            AR_y = msg.pose.pose.position.y
-            AR_Z = msg.pose.pose.position.z
-            Xrot = msg.pose.pose.orientation.y
-            Yrot = msg.pose.pose.orientation.x
-            Zrot = msg.pose.pose.orientation.z
-            Wrot = msg.pose.pose.orientation.w
-            # AR_x = 0
-            # AR_y = 0
-            # AR_Z = 0
-            # Xrot = 0
-            # Yrot = 0
-            # Zrot = 0
-            # Wrot = 0
-            # AR_tz = math.atan2(2*Zrot*Wrot, 1-2*Zrot*Zrot)
-            siny_cosp = 2 * (Wrot * Zrot + Xrot * Yrot)
-            cosy_cosp = 1 - 2 * (Yrot * Yrot + Zrot * Zrot)
-            AR_tz = math.atan2(siny_cosp, cosy_cosp)
-
-
-
-            tag_location=self.import_yaml()
-
-            Tag_pose=tag_location['AR_tags'][str(id_tag)]
-
-            camera_to_tag=np.array([[math.cos(AR_tz),-math.sin(AR_tz),0,AR_x],[math.sin(AR_tz),math.cos(AR_tz),0,AR_y],[0,0,1,AR_Z],[0,0,0,1]])
-            tag_to_camera=np.linalg.inv(camera_to_tag)
-            # tag_to_camera=(camera_to_tag)
-            map_to_tag=np.array([[math.cos(Tag_pose[5]),-math.sin(Tag_pose[5]),0,Tag_pose[0]],[math.sin(Tag_pose[5]),math.cos(Tag_pose[5]),0,Tag_pose[1]],[0,0,1,Tag_pose[2]],[0,0,0,1]])
-
-            map_to_camera=np.dot(map_to_tag,tag_to_camera)
-
-            msg_pose=PoseWithCovarianceStamped()
-            msg_pose.pose.pose.position.x=map_to_camera[1,3]
-            msg_pose.pose.pose.position.y=map_to_camera[0,3]
-            if(abs(Tag_pose[5])==1.57):
-                msg_pose.pose.pose.orientation.z=-Tag_pose[5]
-            else:
-                msg_pose.pose.pose.orientation.z=Tag_pose[5]
             
-            # msg_pose.pose.pose.orientation.z=math.atan(map_to_camera[1,0]/map_to_camera[0,0])
-            msg_pose.pose.pose.orientation.w=1
-            self.tag_pub.publish(msg_pose)
-            rate = rospy.Rate(50)
-            rate.sleep()
+            # msg_pose=PoseWithCovarianceStamped()
+            xtot=0
+            ytot=0
+            tagposetot=0
+            for i in range(len(data.markers)):
+                msg=data.markers[i]
+                id_tag=msg.id
+                AR_x = msg.pose.pose.position.x
+                AR_y = msg.pose.pose.position.y
+                AR_Z = msg.pose.pose.position.z
+                Xrot = msg.pose.pose.orientation.y
+                Yrot = msg.pose.pose.orientation.x
+                Zrot = msg.pose.pose.orientation.z
+                Wrot = msg.pose.pose.orientation.w
+                # AR_tz = math.atan2(2*Zrot*Wrot, 1-2*Zrot*Zrot)
+                siny_cosp = 2 * (Wrot * Zrot + Xrot * Yrot)
+                cosy_cosp = 1 - 2 * (Yrot * Yrot + Zrot * Zrot)
+                AR_tz = math.atan2(siny_cosp, cosy_cosp)
+
+
+
+                tag_location=self.import_yaml()
+
+                Tag_pose=tag_location['AR_tags'][str(id_tag)]
+
+                camera_to_tag=np.array([[math.cos(AR_tz),-math.sin(AR_tz),0,AR_x],[math.sin(AR_tz),math.cos(AR_tz),0,AR_y],[0,0,1,AR_Z],[0,0,0,1]])
+                tag_to_camera=np.linalg.inv(camera_to_tag)
+                # tag_to_camera=(camera_to_tag)
+                map_to_tag=np.array([[math.cos(Tag_pose[5]),-math.sin(Tag_pose[5]),0,Tag_pose[0]],[math.sin(Tag_pose[5]),math.cos(Tag_pose[5]),0,Tag_pose[1]],[0,0,1,Tag_pose[2]],[0,0,0,1]])
+
+                map_to_camera=np.dot(map_to_tag,tag_to_camera)
+                #mean of poses    
+                xtot+=map_to_camera[1,3]
+                ytot+=map_to_camera[0,3]
+                if(abs(Tag_pose[5])==1.57):
+                    Tag_pose[5]=-Tag_pose[5]
+                # else:
+                    # Tag_pose[5]=Tag_pose[5]
+                tagposetot+=Tag_pose[5]
+
+            self.iter+=1
+            map_to_camera[1,3]=xtot/(len(data.markers)) 
+            map_to_camera[0,3]=ytot/(len(data.markers)) 
+            Tag_pose[5]=tagposetot/(len(data.markers))
+            self._xtot+=map_to_camera[1,3]
+            self._ytot+=map_to_camera[0,3]
+            self._tagposetot+=Tag_pose[5]
+            
+            print("iter",self.iter)
+            if self.iter>=10:
+                map_to_camera[1,3]=self._xtot/self.iter
+                map_to_camera[0,3]=self._ytot/self.iter
+                Tag_pose[5]=self._tagposetot/self.iter
+                
+                msg_pose=PoseWithCovarianceStamped()
+                msg_pose.pose.pose.position.x=map_to_camera[1,3]
+                msg_pose.pose.pose.position.y=map_to_camera[0,3]
+                # if(abs(Tag_pose[5])==1.57):
+                #     msg_pose.pose.pose.orientation.z=-Tag_pose[5]
+                # else:
+                #     msg_pose.pose.pose.orientation.z=Tag_pose[5]
+                msg_pose.pose.pose.orientation.z=Tag_pose[5]
+                
+                # msg_pose.pose.pose.orientation.z=math.atan(map_to_camera[1,0]/map_to_camera[0,0])
+                msg_pose.pose.pose.orientation.w=1
+                # rate = rospy.Rate(1000)
+                # rate.sleep()
+                self.tag_pub.publish(msg_pose)
+                # set every thing to zero
+                self._xtot=0
+                self._ytot=0
+                self._tagposetot=0
+                self.iter=0
+
+                
         except:
             rospy.loginfo("Tag is not seen")
+            self._xtot=0
+            self._ytot=0
+            self._tagposetot=0
+            self.iter=0
 
         '''
 
